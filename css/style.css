@@ -1,0 +1,270 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@font-face {
+  font-family: montserrat;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/montserrat-300.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: montserrat;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/montserrat-400.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: montserrat;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/montserrat-500.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: montserrat;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/montserrat-700.woff2) format("woff2")
+}
+
+body {
+  color: #FFF;
+  font-family: Montserrat;
+  line-height: normal;
+}
+
+
+/* .myBtn {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+} */
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.70);
+}
+
+
+.modal-content {
+  position: relative;
+  background-image: url(../images/pop_up/bg.jpg);
+  margin: auto;
+  text-align: center;
+  padding: 40px;
+  height: 650px;
+  width: 800px;
+  animation-name: animatetop;
+  animation-duration: 1s;
+  border-radius: 20px;
+}
+
+@keyframes animatetop {
+  from {
+    top: -400px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+
+.close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  display: block;
+
+}
+
+.modal__descr {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+.modal__text {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  white-space: nowrap;
+}
+
+.big-text {
+  max-height: 90px;
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 142px;
+  background: linear-gradient(180deg, #009CF4 0%, #102F9D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+}
+
+.modal__clock {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.modal__clock-item {
+  position: relative;
+  padding: 0 20px;
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #F4B000 0%, #F44900 99.99%, rgba(244, 176, 0, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal__clock-item:nth-child(2)::before {
+  content: ":";
+  position: absolute;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(180deg, #F4B000 0%, #F44900 99.99%, rgba(244, 176, 0, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: 0;
+  left: -10px;
+}
+
+.modal__clock-item:nth-child(2)::after {
+  content: ":";
+  position: absolute;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(180deg, #F4B000 0%, #F44900 99.99%, rgba(244, 176, 0, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: 0;
+  right: -10px;
+}
+
+.modal__link {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 14px 46px;
+  max-width: 280px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #F4B000 0%, #F44900 99.99%);
+  white-space: nowrap;
+}
+
+
+
+@media (max-width:860px) {
+  .modal-content {
+    padding: 40px 18px;
+    width: 80%;
+  }
+
+  .close {
+    display: none;
+  }
+}
+
+
+@media (max-width:798px) {
+
+  .modal__descr {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .modal__text {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+
+  .modal__link {
+    max-width: 150px;
+  }
+
+}
+
+@media (max-width:440px) {
+  .modal-content {
+    min-width: 320px;
+    width: auto;
+  }
+}
