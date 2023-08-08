@@ -263,8 +263,20 @@ body {
 }
 
 @media (max-width:440px) {
+  .modal {
+    padding: 20px 10px 0 10px;
+  }
+
   .modal-content {
-    min-width: 320px;
+    min-width: 310px;
     width: auto;
+  }
+
+  .big-text {
+    font-size: 126px;
+  }
+
+  .modal__text {
+    font-size: 18px;
   }
 }
